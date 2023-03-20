@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #121213;
+}
+
+h1{
+    color: #818384;
+    margin: 25px;
+}
+
+.gameGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    color: white;
+}
+
+.gameRow {
+    display: flex;
+    gap: 5px;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    border: solid #3a3a3c 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.keyBoard {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    color: white;
+}
+
+.kbRow1,
+.kbRow2,
+.kbRow3 {
+    display: flex;
+    gap: 4px;
+}
+
+.alphabet {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.enter,
+.clear {
+    width: 55px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+@keyframes flip {
+    0% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0.01);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tile {
+        width: 50px;
+        height: 50px;
+        font-size: larger;
+    }
+
+    .alphabet {
+        width: 25px;
+        height: 25px;
+    }
+
+    .gameGrid {
+        gap: 3px;
+    }
+
+    .keyBoard {
+        gap: 3px;
+        font-size: smaller;
+    }
+
+    .clear,
+    .enter {
+        width: 35px;
+        font-size: smaller;
+    }
+}
